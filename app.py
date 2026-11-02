@@ -149,7 +149,7 @@ with tab2:
         st.markdown("#### Matriz de Confusión")
         try:
             # Usamos la ruta de la carpeta imagenes/
-            st.image("imagenes/top_variables.png", caption="Matriz de Confusión - Random Forest", use_container_width=True)
+            st.image("top_variables.png", caption="Matriz de Confusión - Random Forest", use_container_width=True)
         except:
             st.warning("Falta la imagen 'top_variables.png' en la carpeta 'imagenes'.")
 
@@ -157,7 +157,7 @@ with tab2:
         st.markdown("#### Top 10 Variables más Importantes")
         try:
             # Usamos la ruta de la carpeta imagenes/
-            st.image("imagenes/matriz_confusion.png", caption="Importancia de las variables clínicas", use_container_width=True)
+            st.image("matriz_confusion.png", caption="Importancia de las variables clínicas", use_container_width=True)
         except:
             st.warning("Falta la imagen 'matriz_confusion.png' en la carpeta 'imagenes'.")
 
