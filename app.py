@@ -146,10 +146,10 @@ with tab2:
     col_img1, col_img2 = st.columns(2)
     
     with col_img1:
-        st.markdown("#### Matriz de Confusión")
+        st.markdown("#### Matriz de Confusión y Curva ROC")
         try:
             # Usamos la ruta de la carpeta imagenes/
-            st.image("top_variables.png", caption="Matriz de Confusión - Random Forest", use_container_width=True)
+            st.image("top_variables.png", caption="Matriz de Confusión y Curva ROC- Random Forest", use_container_width=True)
         except:
             st.warning("Falta la imagen 'top_variables.png' en la carpeta 'imagenes'.")
 
