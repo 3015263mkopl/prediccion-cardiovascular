@@ -3,9 +3,7 @@ import pandas as pd
 import joblib
 import numpy as np
 
-# ==========================================
-# 1. CONFIGURACIÓN DE LA PÁGINA Y ESTILOS
-# ==========================================
+# CONFIGURACIÓN DE LA PÁGINA Y ESTILOS
 st.set_page_config(
     page_title="Predicción Cardiovascular",
     page_icon="🫀",
@@ -20,9 +18,7 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# ==========================================
-# 2. CARGA DEL MODELO
-# ==========================================
+# CARGA DEL MODELO
 @st.cache_resource
 def cargar_modelo():
     try:
@@ -33,9 +29,8 @@ def cargar_modelo():
 
 modelo = cargar_modelo()
 
-# ==========================================
-# 3. ENCABEZADO Y PRESENTACIÓN
-# ==========================================
+# ENCABEZADO Y PRESENTACIÓN
+
 st.markdown('<p class="main-title">🫀 Sistema de Predicción Cardiovascular</p>', unsafe_allow_html=True)
 st.markdown('<p class="sub-title">Herramienta analítica basada en Machine Learning (Dataset de Cleveland - UCI)</p>', unsafe_allow_html=True)
 
@@ -52,14 +47,14 @@ with st.expander("Ver Integrantes y Objetivo del Proyecto", expanded=True):
     * Diego Mendoza Gutiérrez
     """)
 
-# ==========================================
-# 4. PESTAÑAS PRINCIPALES (TABS)
-# ==========================================
+
+#  PESTAÑAS PRINCIPALES 
+
 tab1, tab2 = st.tabs(["🩺 Realizar Predicción", "📊 Sobre el Modelo y Entrenamiento"])
 
-# ------------------------------------------
+
 # PESTAÑA 1: FORMULARIO Y PREDICCIÓN
-# ------------------------------------------
+
 with tab1:
     if modelo is not None:
         st.markdown("### Ingrese los datos clínicos del paciente")
@@ -125,7 +120,7 @@ with tab1:
             El modelo de Random Forest evalúa principalmente la Edad, el tipo de dolor torácico (cp), la frecuencia cardíaca máxima (thalach) y la depresión del ST (oldpeak). Según los valores ingresados, el algoritmo calculó esta probabilidad.
             """)
 
-# ------------------------------------------
+
 # PESTAÑA 2: MÉTRICAS Y VISUALIZACIONES DEL ENTRENAMIENTO
 # ------------------------------------------
 with tab2:
